@@ -1,0 +1,21 @@
+﻿<Window x:Class="WPFSelectRow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFSelectRow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Button Margin="5" Padding="3" Click="Button_Click">Row 1</Button>
+            <Button Margin="5" Padding="3" Click="Button_Click_1">Row 2</Button>
+        </StackPanel>
+        <local:UserControl1 Grid.Column="1" x:Name="dataGridUC" />
+
+    </Grid>
+</Window>
